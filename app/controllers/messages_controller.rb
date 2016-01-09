@@ -30,7 +30,7 @@ class MessagesController < ApplicationController
   def update
     if @message.update(message_params)
       #保存に成功した場合はトップページへリダイレクト
-      redirect to root_path , notivce: 'メッセージを編集しました'
+      redirect_to root_path , notice: 'メッセージを編集しました'
     else
       #保存に失敗した場合は編集画面へ戻す
       render 'edit'
